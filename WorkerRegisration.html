@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0vh;
+            margin: 0;
+            /* background-image: url("http://localhost/Mini_Project/Images/BM2.jpeg"); */
+
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 0px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 0px;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .gender-group {
+            margin: 10px 0;
+        }
+        .gender-group label {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Worker Details Form</h1>
+        <form action="WorkerRegisration_Authentication.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <div class="gender-group">
+                <label>Gender:</label>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="Male" required> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="Female" required> Female
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="Other" required> Other
+                </label>
+            </div>
+
+            <label for="aadhar_number">Aadhar Number:</label>
+            <input type="number" id="aadhar_number" name="aadhar_number" required>
+
+            <label for="joining_date">Joining Date:</label>
+            <input type="date" id="joining_date" name="joining_date" required>
+
+            <label for="worker_type">Worker Type:</label>
+            <select id="worker_type" name="worker_type" required>
+                <option value="" disabled selected>Select Worker Type</option>
+                <option value="Temporary">Temporary</option>
+                <option value="Permanent">Permanent</option>
+            </select>
+
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" required>
+
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" required>
+
+            <label for="village">Village:</label>
+            <input type="text" id="village" name="village" required>
+
+            <label for="mandal">Mandal:</label>
+            <input type="text" id="mandal" name="mandal" required>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

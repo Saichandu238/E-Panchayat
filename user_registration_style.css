@@ -1,0 +1,60 @@
+body{
+    background-color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+ }
+.login-box{
+    width: 360px;
+    height: 2010px;
+    margin: auto;
+    border-radius: 3px;
+    background-color:white;   
+    font-size: 15px;
+}
+ h1{
+    text-align: center;
+    padding-top: 10px;
+ }
+ h3{
+    text-align: center;
+    padding: auto;
+ }
+ form{
+    width: 270px;
+    height: 580px;
+    margin-left: 20px;
+ }
+ form label{
+    display: flex;
+    margin-top: 20px;
+    font-size:15px;
+ }
+ form input{
+    width: 120%;
+    padding: 8px;
+    border: solid;
+    border: 2px solid gray;
+    outline: none;
+ }
+ input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 50px;
+    border:none;
+    background-color:green;
+    color: white;
+    font-size: 18px;
+ }
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para-2{
+    text-align: center;
+    color:black;
+    font-size: 16px;
+    margin-top: -13px;   
+}
+.para-2 a{
+    color:blue;
+}

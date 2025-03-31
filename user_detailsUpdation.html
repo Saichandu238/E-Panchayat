@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update User Details</title>
+    <link rel="stylesheet" href="user_registration_style.css">
+</head>
+<body>
+    <center>
+        <div class="update-box">
+            <h1>Update User Details</h1>
+            <form action="user_detailsUpdation.php" method="POST">
+                <label><b>Enter User ID</b></label>
+                <input type="text" placeholder="User ID" name="user_id" required>
+                
+                <label><b>Enter New FSC Number</b></label>
+                <input type="text" placeholder="New FSC Number" name="FSC_number">
+                
+                <label><b>Enter New Aadhar Number</b></label>
+                <input type="text" placeholder="New Aadhar Number" name="Aadhar_number" pattern="\d{12}" title="Please enter a valid 12-digit Aadhar number">
+                
+                <label><b>Enter New Name</b></label>
+                <input type="text" placeholder="New Name" name="Name">
+                
+                <label><b>Enter New Village</b></label>
+                <input type="text" placeholder="New Village" name="Village">
+                
+                <label><b>Enter New Phone Number</b></label>
+                <input type="tel" placeholder="New Phone Number" name="Phone_number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                
+                <label><b>Enter New Mail ID</b></label>
+                <input type="email" placeholder="New Mail ID" name="Mail_id" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                
+                <label><b>Enter New Password</b></label>
+                <input type="password" placeholder="New Password" name="Password">
+                
+                <input type="submit" value="Update Details" name="update">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

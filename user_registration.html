@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchayat Raj & Rural Employment</title>
+    <style>
+        body {
+            margin: 0;
+            background-color:white;
+            font-family: Arial, sans-serif;
+            background-image: url("http://localhost/Mini_Project/Images/F2.jpg");
+            background-size: 100% 100%; /* Set width to 100px and height to 200px */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            height: 100vh; /* Full viewport height */
+        }
+        /* .header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        .header {
+            background-color:white;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header img {
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+        .links {
+            text-align: left;
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #483D8B;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }    
+      
+        .grid-container {
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr); /* Creates 4 equal columns */
+            gap: 150px; /* Space between grid items */
+        }
+
+        .grid-item {
+            padding: 3px;
+            border: 5px  rgba(209, 206, 206, 0.795);
+            background-color: rgba(209, 206, 206, 0.795);
+            text-align: left;
+            padding-top: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color:#4682B4;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(209, 206, 206, 0.795);
+    text-align: left;
+}
+
+.grid-item h3 {
+    margin-top: 0;
+}
+
+.grid-item ul {
+    list-style-type: disc; /* Change to circle or square if desired */
+    padding-left: 20px;
+}
+
+.grid-item ul li {
+    margin-bottom: 5px;
+}
+
+.grid-item a {
+    color: #0606f1ac;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
+<title>Registration Form</title>
+        <style>
+            body{
+    background-color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+ }
+.login-box{
+    width: 600px;
+    height: 950px;
+    margin: auto;
+    border-radius: 3px;
+    background-color:rgba(209, 206, 206, 0.438);   
+    
+    font-size: 15px;
+}
+ h1{
+    text-align: center;
+    padding-top: 10px;
+ }
+ h3{
+    text-align: center;
+    padding: auto;
+ }
+ form{
+    width: 270px;
+    height: 580px;
+    margin-left: -50px;
+ }
+ form label{
+    display: flex;
+    margin-top: 20px;
+    font-size:15px;
+ }
+ form input{
+    width: 120%;
+    padding: 8px;
+    border: solid;
+    border: 2px solid gray;
+    outline: none;
+ }
+ input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 13px;
+    border:none;
+    background-color:green;
+    color: white;
+    font-size: 18px;
+ }
+p{
+    text-align: center;
+    padding-top: 35px;
+    font-size: 15px;
+}
+.para-2{
+    text-align: center;
+    color:black;
+    font-size: 16px;
+    margin-top: -13px;   
+}
+.para-2 a{
+    color:blue;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <img src="http://localhost/Mini_Project/Images/EPM3.jpg" width="120" height="120" alt="E-Panchayat">
+            <div class="header-text">
+            <h1>Welcome to E-PANCHYAT</h1>
+            <h2>Government of Telangana</h2>
+            </div>
+            <img src="http://localhost/Mini_Project/Images/Emblem%20of%20Telengana%20(1).jpg" width="120" height="120" alt="Telangana logo">
+        </div>
+        </div>
+    
+        <!-- Links Section -->
+        <div class="links">
+            <a href="Home_Page.html">
+            <img src="http://localhost/Mini_Project/Images/HSymbol.jpg" width="25" height="25" alt="Home">
+            </a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Panchyat Services</a>
+                <div class="dropdown-content">
+                    <a href="Admin_login.html">Admin Login</a>
+                    <a href="Serpanch_login.html">Serpanch Login</a>
+                    <a href="WardMember_Login.html">Ward Login</a>
+                    <a href="user_login.html">User Login</a>
+                    <a href="Family_Registration.html">Register a Family</a>
+                    <a href="UpdateFamily_Details.html">Update Family Details</a>              
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Revenue Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="VRO_Login.html">VRO Login</a> -->
+                    <a href="MRO_login.html">MRO Login</a>
+                    <a href="DRO_login.html">District Revenue Login</a>
+                    <a href="SRO_login.html">State Revenue Login</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User Services</a>
+                <div class="dropdown-content">
+                    <a href="user_login.html">User Login</a>
+                    <a href="user_registration.html">Register as User</a>
+                </div>
+            </div>
+    
+            <a href="Main_login.html">Main Login</a>
+            <a href="Family_Registration.html">Family Registration</a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Members data</a>
+                <div class="dropdown-content">
+                    <a href="SROdata_Home.php">SRO's data</a>
+                    <a href="StateManagerdata_Home.php">StateManager data</a>
+                    <a href="DROdata_Home.php">DRO's data</a>
+                    <a href="MROdata_Home.php">MRO's data</a>
+                    <a href="Serpanchdata_Home.php">Serpanch data</a>
+                    <a href="Admindata_Home.php">Admin data
+                    <a href="WardMemberdata_Home.php">Ward Member's data</a>
+                
+                </div>
+            </div>
+        </div>
+
+
+        <center>
+            <div class="login-box">
+                <h1>Register as a User</h1>
+                <h3>User should create an account to register for the E-PANCHAYAT services</h3>
+                <form action="user_registrationServer.php" method="POST">
+                    <label><b>Enter the FSC number</b></label>
+                    <input type="text" placeholder="Ration card number" name="FSC_number"  minlength="11" maxlength="15"   required>
+                    
+                    <label><b>Enter the name as per Aadhar card</b></label>
+                    <input type="text" placeholder="Name" name="Name" pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces" required>
+                    
+                    <label><b>Enter Aadhar number</b></label>
+                    <input type="text" placeholder="Aadhar number" name="Aadhar_number" pattern="\d{12}" minlength="12" maxlength="12"   title="Aadhar number should be a 12-digit number" required>
+                    
+                    <label><b>Village Name</b></label>
+                    <input type="text" placeholder="Village" name="Village" minlength="1" maxlength="500" required>
+
+                    <label><b>Mandel</b></label>
+                    <input type="text" placeholder="Mandel" name="Mandel" minlength="1" maxlength="500" required>
+
+                    <label><b>District</b></label>
+                    <input type="text" placeholder="District" name="District" minlength="1" maxlength="500" required>
+
+                    <label><b>Mail ID</b></label>
+                    <input type="text" placeholder="Email" name="mail-id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@mail.com)" required>
+                    
+                    <label><b>Phone number</b></label>
+                    <input type="text" placeholder="Number" name="Number" pattern="\d{10}" maxlength="10" title="Phone number should be a 10-digit number" required>
+                    
+                    <label><b>Enter Password</b></label>
+                    <input type="password" placeholder="Password" name="Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                    
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Confirm Password" name="Conform_Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                   
+                    <p class="para-2">Already registered? <a href="user_login.html">Login here</a></p>
+                   
+                    <input type="submit" value="Register" name="registered">
+                </form>
+            </div>
+            <!-- <p class="para-2">Already registered? <a href="user_login.html">Login here</a></p> -->
+        </center>
+         
+        
+    
+</body>
+</html>
+
