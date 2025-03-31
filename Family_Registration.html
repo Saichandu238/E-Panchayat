@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchayat Raj & Rural Employment</title>
+    <style>
+        body {
+            margin: 0;
+            background-color:white;
+            font-family: Arial, sans-serif;
+            background-image: url("http://localhost/Mini_Project/Images/T8.jpeg");
+            background-size: 600px 800px; /* Set width to 100px and height to 200px */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+           
+        }
+        /* .header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        .header {
+            background-color:white;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header img {
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+        .links {
+            text-align: left;
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #483D8B;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .circle.active {
+            background-color: white;
+        }
+        .info-and-stats {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .info-box {
+            text-align: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+        .info-box img {
+            border-radius: 5%;
+            width: 150px;
+            height: 150px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .stats {
+            width: 60%;
+            border-collapse: collapse;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .stats td, .stats th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .stats th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .grid-container {
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr); /* Creates 4 equal columns */
+            gap: 150px; /* Space between grid items */
+        }
+
+        .grid-item {
+            padding: 3px;
+            border: 5px  rgba(209, 206, 206, 0.795);
+            background-color: rgba(209, 206, 206, 0.795);
+            text-align: left;
+            padding-top: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color:#4682B4;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(209, 206, 206, 0.795);
+    text-align: left;
+}
+
+.grid-item h3 {
+    margin-top: 0;
+}
+
+.grid-item ul {
+    list-style-type: disc; /* Change to circle or square if desired */
+    padding-left: 20px;
+}
+
+.grid-item ul li {
+    margin-bottom: 5px;
+}
+
+.grid-item a {
+    color: #0606f1ac;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
+/* Reset some default styles */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Header styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Form container */
+form {
+   padding-top: 10px;
+    width: 500px;
+    height: 1050px;
+    text-align: center;
+   
+    background-color: rgba(249, 246, 246, 0.544);   
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* General label styles */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Container for dynamically generated family member fields */
+#familyMembersContainer {
+    margin-top: 20px;
+}
+
+#familyMembersContainer div {
+    background-color: #f9f9f971;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Input field in dynamically generated sections */
+#familyMembersContainer input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+/* Styling for form submission and alert handling */
+form button[type="submit"] {
+    background-color: #28a745;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+
+
+    </style>
+     <!-- <link rel="stylesheet" href="Family_RegistrationStyles.css"> -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Family Details Form</title>
+     <script>
+        function generateFamilyFields() {
+    // Get the number of family members
+    var numberOfMembers = document.getElementById('familyCount').value;
+
+    // Get the container for family member fields
+    var container = document.getElementById('familyMembersContainer');
+
+    // Clear the container
+    container.innerHTML = '';
+
+    // Generate fields for each family member
+    for (var i = 0; i < numberOfMembers; i++) {
+        var memberDiv = document.createElement('div');
+        memberDiv.innerHTML = `
+<h3>Family Member ${i + 1}</h3>
+
+<label for="aadhaar${i}">Aadhar Number:</label>
+<input type="text" id="aadhaar${i}" name="familyMembers[${i}][aadhaar]" required><br>
+
+<label for="name${i}">Name:</label>
+<input type="text" id="name${i}" name="familyMembers[${i}][name]" required><br>
+
+<label for="dob${i}">Date of Birth:</label>
+<input type="date" id="dob${i}" name="familyMembers[${i}][dob]" required><br>
+
+<label for="relation${i}">Relation with Head of Family:</label>
+<input type="text" id="relation${i}" name="familyMembers[${i}][relation]" required><br>
+`;
+        container.appendChild(memberDiv);
+    }
+}
+
+ 
+         function handleSubmit(event) {
+             // Add any additional validation or processing here if needed
+         }
+     </script>
+
+</head>
+<body>
+
+
+    
+    <form id="familyForm" onsubmit="handleSubmit(event)" action="Family_RegistrationServer.php" method="post">
+        <!-- Head of Family Details -->
+        <h1>Enter Family Details</h1>
+        <label for="FCS">Ration card number (FCS):</label>
+        <input type="text" id="FCS" name="FCS" minlength="8" maxlength="15" required><br><br>
+
+        <label for="headAadhar">Head of Family Aadhar Number:</label>
+        <input type="text" id="headAadhar" name="headAadhar" minlength="12" maxlength="12" pattern="^[0-9]*" required><br><br>
+
+        <label for="NameOfHead">Family Head Name:</label>
+        <input type="text" id="NameOfHead" name="NameOfHead" required><br><br>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required><br><br>
+
+        <label for="Voters">Number of Voters in the Family:</label>
+        <input type="number" id="Voters" name="Voters" min="1" pattern="^[0-9]*" required><br><br>
+
+        <label for="Education">Number of Educated Members in the Family:</label>
+        <input type="number" id="Education" name="Education" min="1" pattern="^[0-9]*" required><br><br>
+
+        <label for="Village">Enter Village Name:</label>
+        <input type="text" id="Village" name="Village" required><br><br>
+
+        <label for="Mandal">Enter Mandal Name:</label>
+        <input type="text" id="Mandal" name="Mandal" required><br><br>
+
+        <label for="District">Enter District Name:</label>
+        <input type="text" id="District" name="District" required><br><br>
+
+        <!-- Family Members -->
+        <label for="familyCount">Number of Family Members:</label>
+        <input type="number" id="familyCount" name="familyCount" min="1" pattern="^[0-9]*">
+        <button type="button" onclick="generateFamilyFields()">Generate Fields</button><br><br>
+
+        <div id="familyMembersContainer"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

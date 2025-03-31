@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body{
+    background-color:white;
+    font-family: 'Roboto', sans-serif;
+ }
+.login-box{
+    width: 600px;
+    height: 910px;
+    margin: auto;
+    border-radius: 0px;
+    background-color:white;   
+    font-size: 15px;
+}
+ h1{
+    text-align: center;
+    padding-top: 10px;
+ }
+ h3{
+    text-align: center;
+    padding: auto;
+ }
+ form{
+    width: 270px;
+    height: 580px;
+    margin-left: -70px;
+ }
+ form label{
+    display: flex;
+    margin-top: 20px;
+    font-size:15px;
+ }
+ form input{
+    width: 120%;
+    padding: 8px;
+    border: solid;
+    border: 2px solid gray;
+    outline: none;
+ }
+ input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 50px;
+    border:none;
+    background-color:green;
+    color: white;
+    font-size: 18px;
+ }
+.para-2{
+    text-align: center;
+    color:black;
+    font-size: 16px;
+    margin-top: 6px;   
+}
+.para-2 a{
+    color:blue;
+}
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="login-box">
+                <h1>Welcome to DRO Registration</h1>
+                <h3>DRO Registration is Done by the SRO</h3>
+                <form action="DRORegistration_Server.php" method="POST">
+                    <!-- <label><b>Give the ID of Serpanch</b></label>
+                    <input type="text" placeholder="Serpanch ID" name="Id" pattern="[A-Za-z0-9]{15}" minlength="11" maxlength="15"   title="Serpanch ID should be 15 alphanumeric characters" required> -->
+                    
+
+                    <label><b>Authentication id</b></label>
+                    <input type="text" placeholder="Authentication_id" name="Authentication_id"  required>
+
+                    <label><b>Name </b></label>
+                    <input type="text" placeholder="Name" name="Name" pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces" required>
+                    
+                    <label><b>Enter Aadhar number</b></label>
+                    <input type="text" placeholder="Aadhar number" name="Aadhar_number" pattern="\d{12}" minlength="12" maxlength="12"   title="Aadhar number should be a 12-digit number" required>
+                    
+
+                    <label><b>Date of Birth</b></label>
+                    <input type="date" placeholder="DOB" name="DOB" minlength="8" maxlength="15" required>
+
+                    <label><b>Date of Joining</b></label>
+                    <input type="date" placeholder="Joining date" name="Joining_date" minlength="8" maxlength="10" required>
+
+                    <label><b>Village Name</b></label>
+                    <input type="text" placeholder="Village" name="Village" required>
+
+                    <label><b>Mandal Name</b></label>
+                    <input type="text" placeholder="Mandal" name="Mandal" required>
+
+                    <label><b>District Name</b></label>
+                    <input type="text" placeholder="District" name="District" required>
+                    
+                    <label><b>Mail ID</b></label>
+                    <input type="text" placeholder="Email" name="Gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@mail.com)" required>
+
+                    <label><b>Enter Password</b></label>
+                    <input type="password" placeholder="Password" name="Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                    
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Confirm Password" name="Conform_Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                    
+                    <input type="submit" value="Register" name="registered">
+                </form>
+            </div>
+            <p class="para-2">Already Added? <a href="SRO_Profile.php">click here to Goback</a></p>
+        </center>
+    </body>
+</html>
+
+

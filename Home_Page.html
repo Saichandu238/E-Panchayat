@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchayat Raj & Rural Employment</title>
+    <style>
+        body {
+            margin: 0;
+            background-color:white;
+            font-family: Arial, sans-serif;
+            background-image: url("http://localhost/Mini_Project/Images/T13.jpg");
+            background-size: 100% 100%; /* Set width to 100px and height to 200px */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            height: 100vh; /* Full viewport height */
+        }
+        /* .header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        .header {
+            background-color:white;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header img {
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+        .links {
+            text-align: left;
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #483D8B;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        /* Banner Slideshow */
+        .banner {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .banner img.active {
+            opacity: 1;
+        }
+        .nav-circles {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .circle {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .circle.active {
+            background-color: white;
+        }
+        .info-and-stats {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .info-box {
+            text-align: center;
+            flex: 1;
+            margin: 0 20px;
+        }
+        .info-box img {
+            border-radius: 5%;
+            width: 150px;
+            height: 150px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .stats {
+            width: 60%;
+            border-collapse: collapse;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .stats td, .stats th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .stats th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .news-events {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .news-events td, .news-events th {
+            padding: 8px;
+        }
+        .news-events th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        /* Scrolling text */
+        .scrolling-text {
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            /* border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc; */
+            text-align: center;
+        }
+        .scrolling-text marquee {
+            font-weight: bold;
+            color: #e90a33;
+        }
+        .grid-container {
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr); /* Creates 4 equal columns */
+            gap: 150px; /* Space between grid items */
+        }
+
+        .grid-item {
+            padding: 3px;
+            border: 5px  rgba(209, 206, 206, 0.795);
+            background-color: rgba(209, 206, 206, 0.795);
+            text-align: left;
+            padding-top: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color:#4682B4;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        }
+        .grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(209, 206, 206, 0.795);
+    text-align: left;
+}
+
+.grid-item h3 {
+    margin-top: 0;
+}
+
+.grid-item ul {
+    list-style-type: disc; /* Change to circle or square if desired */
+    padding-left: 20px;
+}
+
+.grid-item ul li {
+    margin-bottom: 5px;
+}
+
+.grid-item a {
+    color: #0606f1ac;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <img src="http://localhost/Mini_Project/Images/EPM3.jpg" width="120" height="120" alt="E-Panchayat">
+            <div class="header-text">
+            <h1>Welcome to E-PANCHYAT</h1>
+            <h2>Government of Telangana</h2>
+            </div>
+            <img src="http://localhost/Mini_Project/Images/Emblem%20of%20Telengana%20(1).jpg" width="120" height="120" alt="Telangana logo">
+        </div>
+        </div>
+    
+        <!-- Links Section -->
+        <div class="links">
+            <a href="Home_Page.html">
+            <img src="http://localhost/Mini_Project/Images/HSymbol.jpg" width="25" height="25" alt="Home">
+            </a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Panchyat E-Services</a>
+                <div class="dropdown-content">
+                    <a href="Admin_login.html">Admin Login</a>
+                    <a href="Serpanch_login.html">Serpanch Login</a>
+                    <a href="WardMember_Login.html">Ward Login</a>
+                    <a href="user_login.html">User Login</a>
+                    <a href="Family_Registration.html">Register a Family</a>            
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Revenue E-Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="VRO_Login.html">VRO Login</a> -->
+                    <a href="MRO_login.html">MRO Login</a>
+                    <a href="DRO_login.html">District Revenue Login</a>
+                    <a href="SRO_login.html">State Revenue Login</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User E-Services</a>
+                <div class="dropdown-content">
+                    <a href="user_login.html">User Login</a>
+                    <a href="user_registration.html">Register as User</a>
+                </div>
+            </div>
+    
+            <a href="Main_login.html">Main Login</a>
+            <a href="Family_Registration.html">Family Registration</a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Members data</a>
+                <div class="dropdown-content">
+                    <a href="SROdata_Home.php">SRO's data</a>
+                    <a href="StateManagerdata_Home.php">StateManager data</a>
+                    <a href="DROdata_Home.php">DRO's data</a>
+                    <a href="MROdata_Home.php">MRO's data</a>
+                    <a href="Serpanchdata_Home.php">Serpanch data</a>
+                    <a href="Admindata_Home.php">Admin data
+                    <a href="WardMemberdata_Home.php">Ward Member's data</a>
+                
+                </div>
+            </div>
+        </div>
+
+    <!-- Scrolling Text -->
+    <div class="scrolling-text">
+        <marquee>Welcome to the E-PANCHYAT  Register an User for Village Services and access  Register the family for Scheme benifits </marquee>
+    </div>
+
+    <div class="content">
+        <!-- Banner Slideshow -->
+        <div class="banner">
+            <img src="http://localhost/Mini_Project/Images/Homepage1.jpeg" class="active" alt="Official Image 1">
+            <img src="http://localhost/Mini_Project/Images/Homepage2.jpg" alt="Official Image 2">
+            <img src="http://localhost/Mini_Project/Images/Homepage4.jpg" alt="Official Image 3">
+            <img src="http://localhost/Mini_Project/Images/EP1.jpeg" width="25" height="25" alt="Official Image 4">
+
+            <!-- <img src="C:\xampp\htdocs\Mini_Project\5.jpg" width="25" height="25" alt="Home"> -->
+
+
+            <!-- Navigation Circles -->
+            <div class="nav-circles">
+                <span class="circle" data-index="0"></span>
+                <span class="circle" data-index="1"></span>
+                <span class="circle" data-index="2"></span>
+                <span class="circle" data-index="3"></span>
+            </div>
+        </div>
+
+        <!-- Info and Stats Section -->
+        <div class="info-and-stats">
+            <div class="info-box">
+                <img src="http://localhost/Mini_Project/Images/seethakka.jpg" width="10px" height="10px" alt="Official Image 2">
+                <p><b>Smt. D.Anasuya Seethakka Garu</b></p>
+                <p>Hon'ble Minister ,</p>
+                <p>Panchayat Raj & Rural Development (including Rural Water Supply), Women & Child Welfare</p>
+                <p>Government of Telangana</p>
+            </div>
+
+            <table class="stats">
+                <tr>
+                    <th>Department of E-Panchayat Profile</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>No. of Rural Districts</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>No. of Zilla Parishad (Districts)</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>No. of Mandal Parishad (Tehsils)</td>
+                    <td>540</td>
+                </tr>
+                <tr>
+                    <td>No. of Gram Panchayats</td>
+                    <td>12,751</td>
+                </tr>
+                <tr>
+                    <td>Rural Population</td>
+                    <td>2,04,04,156</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <img src="http://localhost/Mini_Project/Images/revanthreddy.jpeg" alt="Opppppp">
+                <p><b>Sri Anumula Revanth Reddy Garu</b></p>
+                <p>Hon'ble Chief Minister</p>
+                <p>Government of Telangana</p>
+                <br>
+                <br>
+                <br>
+                <br><br>
+
+            </div>
+        </div>
+
+        <table class="news-events">
+            <tr>
+                <th>News & Events</th>
+            </tr>
+            <tr>
+                <td>Instructions and Postings of CEO(D), Dy. CEO(D) of ZP/TPs, MPP/EO PRs and EO PRs Orders issued.</td>
+            </tr>
+            <tr>
+                <td>Guidelines on the Pradhan Mantri Gram Sadak Yojana (PMGSY).</td>
+            </tr>
+            <tr>
+                <td>Appointment of Special Officers for Gram Panchayats in the State.</td>
+            </tr>
+        </table>
+
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Public Service Numbers</h3>
+            <ul>
+                <li>Police: 100</li>
+                <li>Fire: 102</li>
+                <li>Ambulance: 108</li>
+                <li>Blood Bank: 040-24745243</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h3>Emergency Numbers</h3>
+            <ul>
+                <li>Single Emergency: 112</li>
+                <li>Police: 100</li>
+                <li>Fire: 102</li>
+                <li>Ambulance: 108</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h3>External Links</h3>
+            <ul>
+                <li><a href="https://www.telangana.gov.in/">Telangana State Portal</a></li>
+                <li><a href="https://www.telangana.gov.in/cm-relief-fund/">CM Relief Fund</a></li>
+                <li><a href="https://ts.meeseva.telangana.gov.in/meeseva/home.htm">MeeSeva Portel</a></li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h3>Job Portal Links</h3>
+            <ul>
+                <li><a href="https://example.com/job1">Job Pjbhbyyuortal 1</a></li>
+                <li><a href="https://example.com/job2">Job Portal 2vtvtyvty</a></li>
+                <li><a href="https://example.com/job3">Job Portayvtyvtttl 3</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+
+
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.banner img');
+        const circles = document.querySelectorAll('.circle');
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+            updateCircles(index);
+        }
+
+        function updateCircles(index) {
+            circles.forEach((circle, i) => {
+                circle.classList.remove('active');
+                if (i === index) {
+                    circle.classList.add('active');
+                }
+            });
+        }
+
+        circles.forEach(circle => {
+            circle.addEventListener('click', (e) => {
+                currentImageIndex = parseInt(e.target.getAttribute('data-index'));
+                showImage(currentImageIndex);
+            });
+        });
+
+        // Auto slide images every 5 seconds
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }, 5000);
+    </script>
+</body>
+</html>

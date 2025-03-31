@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Family_RegistrationStyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Details Form</title>
+    <script>
+        function generateFamilyFields() {
+            // Get the number of family members
+            var numberOfMembers = document.getElementById('familyCount').value;
+
+            // Get the container for family member fields
+            var container = document.getElementById('familyMembersContainer');
+
+            // Clear the container
+            container.innerHTML = '';
+
+            // Generate fields for each family member
+            for (var i = 0; i < numberOfMembers; i++) {
+                var memberDiv = document.createElement('div');
+                memberDiv.innerHTML = `
+                    <h3>Family Member ${i + 1}</h3>
+                    <label for="aadhaar${i}">Aadhar Number:</label>
+                    <input type="text" id="aadhaar${i}" name="aadhaar[]" required><br>
+
+                    <label for="name${i}">Name:</label>
+                    <input type="text" id="name${i}" name="name[]" required><br>
+
+                    <label for="dob${i}">Date of Birth:</label>
+                    <input type="date" id="dob${i}" name="dob[]" required><br>
+
+                    <label for="relation${i}">Relation with Head of Family:</label>
+                    <input type="text" id="relation${i}" name="relation[]" required><br>
+                `;
+                container.appendChild(memberDiv);
+            }
+        }
+
+        function handleSubmit(event) {
+            // Add any additional validation or processing here if needed
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Family Details</h1>
+    <form id="familyForm" onsubmit="handleSubmit(event)" action="demoFamilyServer.php" method="post">
+        <!-- Head of Family Details -->
+        <label for="FCS">Ration card number (FCS):</label>
+        <input type="text" id="FCS" name="FCS" minlength="8" maxlength="15" required><br><br>
+
+        <label for="headAadhar">Head of Family Aadhar Number:</label>
+        <input type="text" id="headAadhar" name="headAadhar" minlength="12" maxlength="12" pattern="^[0-9]*" required><br><br>
+
+        <label for="NameOfHead">Family Head Name:</label>
+        <input type="text" id="NameOfHead" name="NameOfHead" required><br><br>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required><br><br>
+
+        <label for="Voters">Number of Voters in the Family:</label>
+        <input type="number" id="Voters" name="Voters" min="1" pattern="^[0-9]*" required><br><br>
+
+        <label for="Education">Number of Educated Members in the Family:</label>
+        <input type="number" id="Education" name="Education" min="1" pattern="^[0-9]*" required><br><br>
+
+        <label for="Village">Enter Village Name:</label>
+        <input type="text" id="Village" name="Village" required><br><br>
+
+        <label for="Mandal">Enter Mandal Name:</label>
+        <input type="text" id="Mandal" name="Mandal" required><br><br>
+
+        <label for="District">Enter District Name:</label>
+        <input type="text" id="District" name="District" required><br><br>
+
+        <label for="Phone Number">Phone Number:</label>
+        <input type="text" id="Number" name="Number" required><br><br>
+
+        <label for="Mail_id">Mail_id:</label>
+        <input type="text" id="Mail_id" name="Mail_id" required><br><br>
+
+        <!-- Family Members -->
+        <label for="familyCount">Number of Family Members:</label>
+        <input type="number" id="familyCount" name="familyCount" min="1" pattern="^[0-9]*">
+        <button type="button" onclick="generateFamilyFields()">Generate Fields</button><br><br>
+
+        <div id="familyMembersContainer"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

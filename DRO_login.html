@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchayat Raj & Rural Employment</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(209, 206, 206, 0.795);
+            font-family: Arial, sans-serif;
+            width: 100%; /* Adjust as needed */
+            background-image: url("http://localhost/Mini_Project/Images/T17.jpg");
+            background-size: 100% 100%; /* Set width to 100px and height to 200px */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            height: 100vh; /* Full viewport height */
+        }
+        /* .header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        .header {
+            background-color:white;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header img {
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .links {
+            text-align: left;
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-bottom: 5px solid #ccc;
+            border-top: 5px solid #ccc;
+            border-left: 5px solid #ccc;
+            border-right: 5px solid #ccc;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #483D8B;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color:#4682B4;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: whitesmoke;
+        } 
+        .login-box{
+          width: 380px;
+          height: 280px;
+           margin: auto;
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.244);   
+          font-size: 15px;
+        }
+        h1{
+            text-align: center;
+            padding-top: 10px;
+        }
+        form{
+            width: 270px;
+            height: 350px;
+            margin-left: 20px;
+        }
+        form label{
+            display: flex;
+            margin-top: 20px;
+            font-size:15px;
+        }
+        form input{
+            width: 120%;
+            padding: 8px;
+            border: solid;
+            border: 2px solid gray;
+            outline: none;
+        }
+        input[type="submit"]{
+            width: 320px;
+            height: 35px;
+            margin-top: 70px;
+            border:none;
+            background-color:green;
+            color: white;
+            font-size: 18px;
+        }
+        .para-box{
+          width: 380px;
+          height: 120px;
+           margin: auto;
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.244);   
+          font-size: 15px;
+        }
+        p{
+            text-align: center;
+            padding-top: 30px;
+            font-size: 15px;
+        }
+        .para-2{
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            margin-top: -13px;   
+        }     
+        .para-2 a{
+            color:blue;
+        }  
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <img src="http://localhost/Mini_Project/Images/EPM3.jpg" width="120" height="120" alt="E-Panchayat">
+            <div class="header-text">
+            <h1>Welcome to E-PANCHYAT</h1>
+            <h2>Government of Telangana</h2>
+            </div>
+            <img src="http://localhost/Mini_Project/Images/Emblem%20of%20Telengana%20(1).jpg" width="120" height="120" alt="Telangana logo">
+        </div>
+        </div>
+    
+        <!-- Links Section -->
+        <div class="links">
+            <a href="Home_Page.html">
+            <img src="http://localhost/Mini_Project/Images/HSymbol.jpg" width="25" height="25" alt="Home">
+            </a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Panchyat E-Services</a>
+                <div class="dropdown-content">
+                    <a href="Admin_login.html">Admin Login</a>
+                    <a href="Serpanch_login.html">Serpanch Login</a>
+                    <a href="WardMember_Login.html">Ward Login</a>
+                    <a href="user_login.html">User Login</a>
+                    <a href="Family_Registration.html">Register a Family</a>
+                    <!-- <a href="UpdateFamily_Details.html">Update Family Details</a>               -->
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Revenue E-Services</a>
+                <div class="dropdown-content">
+                    <!-- <a href="VRO_Login.html">VRO Login</a> -->
+                    <a href="MRO_login.html">MRO Login</a>
+                    <a href="DRO_login.html">District Revenue Login</a>
+                    <a href="SRO_login.html">State Revenue Login</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User E-Services</a>
+                <div class="dropdown-content">
+                    <a href="user_login.html">User Login</a>
+                    <a href="user_registration.html">Register as User</a>
+                </div>
+            </div>
+    
+            <a href="Main_login.html">Main Login</a>
+            <a href="Family_Registration.html">Family Registration</a>
+    
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Members data</a>
+                <div class="dropdown-content">
+                    <a href="SROdata_Home.php">SRO's data</a>
+                    <a href="StateManagerdata_Home.php">StateManager data</a>
+                    <a href="DROdata_Home.php">DRO's data</a>
+                    <a href="MROdata_Home.php">MRO's data</a>
+                    <a href="Serpanchdata_Home.php">Serpanch data</a>
+                    <a href="Admindata_Home.php">Admin data
+                    <a href="WardMemberdata_Home.php">Ward Member's data</a>
+                
+                </div>
+            </div>
+        </div>
+
+    <!-- Scrolling Text -->
+    <!-- <div class="scrolling-text">
+        <marquee>Welcome to the Serpanch Login   If you Dont have an Account  Contact VRO or MRO for Login Serpanch Registeration Access with Proper Documents </marquee>
+    </div> -->
+
+            
+
+    <div class="login-box">
+        <h1>DRO login</h1>
+        <form method="post" action="DROlogin_Authentication.php">
+
+            <label><b>DRO ID</b></label>
+            <input type="text" placeholder="Employee_Id" name="Employee_Id" minlength="10" required>
+
+            <label><b>Mail_Id</b></label>
+            <input type="text" placeholder="Email" name="Mail_id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@mail.com)" required>
+           
+            <label><b>Password</b></label>
+            <input type="password" placeholder="" name="Password" minlength="8" required>
+           
+            <input type="submit" value="login" >
+        </form>
+    </div>
+    <div class="para-box">
+    <p class="para-2">Not have an account? <a href="Home_Page.html">click here to Goback</a></p>
+      </div>  
+</body>
+</html>

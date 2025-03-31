@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body{
+    background-color:white;
+    font-family: 'Roboto', sans-serif;
+ }
+.login-box{
+    width: 600px;
+    height: 930px;
+    margin: auto;
+    border-radius: 0px;
+    background-color:white;   
+    font-size: 15px;
+}
+ h1{
+    text-align: center;
+    padding-top: 10px;
+ }
+ h3{
+    text-align: center;
+    padding: auto;
+ }
+ form{
+    width: 270px;
+    height: 580px;
+    margin-left: -70px;
+ }
+ form label{
+    display: flex;
+    margin-top: 20px;
+    font-size:15px;
+ }
+ form input {
+                width: 120%;
+                padding: 8px;
+                border: solid;
+                border: 2px solid gray;
+                outline: none;
+            }
+            form select {
+                width: 127%;
+                padding: 8px;
+                border: solid;
+                border: 2px solid gray;
+                outline: none;
+            }
+ input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 50px;
+    border:none;
+    background-color:green;
+    color: white;
+    font-size: 18px;
+ }
+.para-2{
+    text-align: center;
+    color:black;
+    font-size: 16px;
+    margin-top: 6px;   
+}
+.para-2 a{
+    color:blue;
+}
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="login-box">
+                <h1>Welcome to Admin Registration</h1>
+                <h3>Admin Registration is Done by the MRO in the presence of Admin and Serpanch </h3>
+                <form action="AdminRegistration_Server.php" method="POST">
+                    <label><b>Name of Admin</b></label>
+                    <input type="text" placeholder="Name" name="Name" pattern="[A-Za-z\s]+" minlength="1" maxlength="1500"   title="Name should contain only letters and spaces" required>
+                    
+                    <!-- <label><b>Name of Serpanch</b></label>
+                    <input type="text" placeholder="Serpanch Name" name="Name" pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces" required> -->
+                    
+                    <label><b>Enter Aadhar number</b></label>
+                    <input type="text" placeholder="Aadhar number" name="Aadhar_number" pattern="\d{12}" minlength="12" maxlength="12"   title="Aadhar number should be a 12-digit number" required>
+                    
+                    <label><b>Date of Admiting</b></label>
+                    <input type="date" placeholder="Joining date" name="Joining_date" minlength="8" maxlength="10" required>
+
+                    <label><b>Date of Validation</b></label>
+                    <input type="date" placeholder="Date of ending" name="ending_date" minlength="8" maxlength="10" required>
+
+
+                    <label for="District"><b>District</b></label>                    <!-- <input type="text" placeholder="Mandel" name="Mandel" required> -->
+                    <select id="District" name="District" required>
+                        <option value="">Select District</option>
+                        <option value="Adilabad">Adilabad</option>
+                        <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+                        <option value="Hanumakonda">Hanumakonda</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Jagtial">Jagtial</option>
+                        <option value="Jangaon">Jangaon</option>
+                        <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+                        <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+                        <option value="Kamareddy">Kamareddy</option>
+                        <option value="Karimnagar">Karimnagar</option>
+                        <option value="Khammam">Khammam</option>
+                        <option value="Komaram Bheem Asifabad">Komaram Bheem Asifabad</option>
+                        <option value="Mahabubabad">Mahabubabad</option>
+                        <option value="Mahabubnagar">Mahabubnagar</option>
+                        <option value="Mancherial">Mancherial</option>
+                        <option value="Medak">Medak</option>
+                        <option value="Medchal-Malkajgiri">Medchal-Malkajgiri</option>
+                        <option value="Mulugu">Mulugu</option>
+                        <option value="Nagarkurnool">Nagarkurnool</option>
+                        <option value="Nalgonda">Nalgonda</option>
+                        <option value="Narayanpet">Narayanpet</option>
+                        <option value="Nirmal">Nirmal</option>
+                        <option value="Nizamabad">Nizamabad</option>
+                        <option value="Peddapalli">Peddapalli</option>
+                        <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+                        <option value="Ranga Reddy">Ranga Reddy</option>
+                        <option value="Sangareddy">Sangareddy</option>
+                        <option value="Siddipet">Siddipet</option>
+                        <option value="Suryapet">Suryapet</option>
+                        <option value="Vikarabad">Vikarabad</option>
+                        <option value="Wanaparthy">Wanaparthy</option>
+                        <option value="Warangal">Warangal</option>
+                        <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+                    </select>
+                
+                <label for="Mandal"><b>Mandal</b></label>
+                <select id="Mandal" name="Mandal" required>
+                    <option value="">Select Mandal</option>
+                </select>
+
+                <label><b>Village Name</b></label>
+                <select id="Village" name="Village" required>
+                    <option value="">Select Village</option>
+                </select>
+
+
+                    <label><b>Phone number</b></label>
+                    <input type="text" placeholder="Number" name="Number" pattern="\d{10}" maxlength="10" title="Phone number should be a 10-digit number" required>
+                    
+                    <label><b>Mail ID</b></label>
+                    <input type="text" placeholder="Gmail" name="Gmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g., example@mail.com)" required>
+
+                    <label><b>Enter Password</b></label>
+                    <input type="password" placeholder="Password" name="Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                    
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Confirm Password" name="Conform_Password" pattern=".{8,}" minlength="8" title="Password should be at least 8 characters long" required>
+                    
+                    <input type="submit" value="Register" name="registered">
+                </form>
+            </div>
+            <p class="para-2">Already Added? <a href="Home_Page.html">click here to Goback</a></p>
+        </center>
+
+
+        <script>
+            // Define the data structure for Mandals and Villages
+            const data = {
+                "Adilabad": {
+    "Mandals": {
+        "Adilabad": [
+            "Adilabad", "Ashoknagar", "Budhpur", "Chowdapur", "Chintalamanepalli", "Devarapalli",
+            "Dothanpalli", "Etur", "Gajwel", "Golla", "Halaram", "Jannaram", "Karanpalli", "Kunda",
+            "Mandhata", "Narsapur", "Peddaganjam", "Rajura", "Ramapur", "Sirpur"
+        ],
+        "Bazarhatnoor": [
+            "Bazarhatnoor", "Bhimaram", "Chintapalli", "Devarpalli", "Gali", "Kamareddy", "Kothapalli",
+            "Madgul", "Manchiryala", "Mutharam", "Narlapur", "Peddaganjam", "Peddapur", "Rajula", "Ramapur",
+            "Yellapur"
+        ],
+        "Bejjur": [
+            "Bejjur", "Chandrapur", "Chennur", "Devapur", "Geddapalli", "Jagdalpur", "Kannepalli", "Komram",
+            "Kusupur", "Malkapur", "Mandhata", "Peddaganjam", "Peddapalli", "Pochampalli", "Rajura"
+        ],
+        "Bhainsa": [
+            "Bhainsa", "Ankapur", "Bhukya", "Chennur", "Dandepalli", "Gummadidala", "Hanamkonda", "Jallapur",
+            "Kamareddy", "Malkapur", "Manchiryala", "Narsapur", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Bodhan": [
+            "Bodhan", "Boggugudem", "Chinnur", "Devarapalli", "Kamareddy", "Kothapalli", "Madgul", "Mutharam",
+            "Narasapur", "Peddaganjam", "Peddapur", "Rajula", "Yellapur"
+        ],
+        "Dharmapuri": [
+            "Dharmapuri", "Chennur", "Devarpalli", "Gangapur", "Hanamkonda", "Kothapalli", "Malkapur", "Manchiryala",
+            "Narsapur", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Gudihatnoor": [
+            "Gudihatnoor", "Ankapur", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Jagdalpur", "Kamareddy",
+            "Kothapalli", "Kusupur", "Mandhata", "Narsapur", "Peddaganjam", "Pochampalli", "Yellapur"
+        ],
+        "Jainad": [
+            "Jainad", "Adilabad", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli", "Mandhata",
+            "Mutharam", "Narsapur", "Peddaganjam", "Rajura"
+        ],
+        "Kagaznagar": [
+            "Kagaznagar", "Ankapur", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Jagdalpur", "Kamareddy",
+            "Kothapalli", "Kusupur", "Mandhata", "Narsapur", "Peddaganjam", "Rajura"
+        ],
+        "Kannepalli": [
+            "Kannepalli", "Adilabad", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli",
+            "Kusupur", "Mandhata", "Mutharam", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Luxettipet": [
+            "Luxettipet", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli", "Kusupur", "Mandhata",
+            "Narsapur", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Neredcherla": [
+            "Neredcherla", "Adilabad", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli",
+            "Kusupur", "Mandhata", "Mutharam", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Nirmal": [
+            "Nirmal", "Adilabad", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli", "Kusupur",
+            "Mandhata", "Mutharam", "Peddaganjam", "Rajura"
+        ],
+        "Penchikalpet": [
+            "Penchikalpet", "Ankapur", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli",
+            "Kusupur", "Mandhata", "Mutharam", "Peddaganjam", "Rajura", "Yellapur"
+        ],
+        "Talamadugu": [
+            "Talamadugu", "Adilabad", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli", "Kusupur",
+            "Mandhata", "Mutharam", "Peddaganjam", "Rajura"
+        ],
+        "Utnoor": [
+            "Utnoor", "Adilabad", "Bhukya", "Chennur", "Devapur", "Geddapalli", "Kamareddy", "Kothapalli", "Kusupur",
+            "Mandhata", "Mutharam", "Peddaganjam", "Rajura", "Yellapur"
+        ]
+    }
+},
+
+               "Bhadradri Kothagudem": {
+    "Mandals": {
+        "Ashwapuram": [
+            "Ashwapuram", "Dandepalli", "Dandepalli (P)", "Dubbaka", "Jallapur", "Kannepalli",
+            "Kothagudem", "Lakshmipuram", "Nallamala", "Palwancha", "Sitarampur", "Somasila", "Vemulapalli"
+        ],
+        "Bhadrachalam": [
+            "Bhadrachalam", "Annavaram", "Bhadradri", "Chandrugonda", "Chintur", "Garla", "Jaggannapet",
+            "Kamalapuram", "Kothagudem", "Narasapur", "Peddaganjam", "Raipole", "Sathupalli", "Vemulapalli"
+        ],
+        "Charla": [
+            "Charla", "Adivikondapur", "Akupamula", "Chinthapalli", "Gollapalli", "Gutta", "Kothagudem",
+            "Laxmipuram", "Malkapur", "Narsampet", "Reddigudem", "Seetharamapuram"
+        ],
+        "Kothagudem": [
+            "Kothagudem", "Chintapalli", "Damera", "Gattapalli", "Jangareddygudem", "Kukunoor", "Laxmidevipalli",
+            "Laxmipuram", "Manuguru", "Palwancha", "Sathupalli", "Vemulapalli"
+        ],
+        "Manuguru": [
+            "Manuguru", "Annavaram", "Chennur", "Gollapalli", "Gudur", "Jangareddygudem", "Kothagudem",
+            "Laxmipuram", "Malkapur", "Mutharam", "Nallamala", "Peddaganjam", "Sathupalli"
+        ],
+        "Palwancha": [
+            "Palwancha", "Chinthapalli", "Gollapalli", "Gudur", "Kannepalli", "Kothagudem", "Laxmidevipalli",
+            "Laxmipuram", "Manuguru", "Malkapur", "Nallamala", "Sathupalli", "Vemulapalli"
+        ],
+        "Sathupalli": [
+            "Sathupalli", "Annavaram", "Chinthapalli", "Gollapalli", "Gudur", "Kannepalli", "Kothagudem",
+            "Laxmipuram", "Malkapur", "Nallamala", "Palwancha", "Vemulapalli"
+        ],
+        "Thallada": [
+            "Thallada", "Annavaram", "Chinthapalli", "Gollapalli", "Gudur", "Kannepalli", "Kothagudem",
+            "Laxmipuram", "Malkapur", "Nallamala", "Palwancha", "Sathupalli", "Vemulapalli"
+        ],
+        "Velair": [
+            "Velair", "Chinthapalli", "Gollapalli", "Gudur", "Kannepalli", "Kothagudem", "Laxmipuram",
+            "Malkapur", "Nallamala", "Palwancha", "Sathupalli", "Vemulapalli"
+        ],
+        "Yellandu": [
+            "Yellandu", "Chinthapalli", "Gollapalli", "Gudur", "Kannepalli", "Kothagudem", "Laxmipuram",
+            "Malkapur", "Nallamala", "Palwancha", "Sathupalli", "Vemulapalli"
+        ]
+    }
+},
+
+                "Hanumakonda": {
+    "Mandals": {
+        "Dharmasagar": [
+            "Dharmasagar", "Narsampet", "Mutharam", "Vardhannapet"
+        ],
+        "Ghanpur (Station)": [
+            "Ghanpur (Station)", "Chinnaganjam", "Malkapur", "Peddapalli"
+        ],
+        "Hanumakonda": [
+            "Hanumakonda", "Kazipet", "Subedari", "Wadiaram"
+        ],
+        "Jangaon": [
+            "Jangaon", "Kistapur", "Kothapet", "Mogullapalle", "Nallabelli", "Narasapur"
+        ],
+        "Kathalapur": [
+            "Kathalapur", "Mangalpalli", "Narsampet", "Raikal"
+        ],
+        "Kesamudram": [
+            "Kesamudram", "Gollapalli", "Jammikunta", "Peddapalli"
+        ],
+        "Mahabubabad": [
+            "Mahabubabad", "Ananthasagar", "Damera", "Ghanpur"
+        ],
+        "Nekkonda": [
+            "Nekkonda", "Dharmasagar", "Raikal", "Vardhannapet"
+        ],
+        "Parkal": [
+            "Parkal", "Armoor", "Gattuppal", "Kalvacharla", "Malkapur", "Peddapalli"
+        ],
+        "Raiparthy": [
+            "Raiparthy", "Jangapalli", "Narsampet", "Siddipet"
+        ]
+    }
+},
+
+                "Warangal": {
+    "Mandals": {
+        "Warangal Urban": [
+            "Hanumakonda", "Kazipet", "Subedari", "Wadiaram"
+        ],
+        "Warangal Rural": [
+            "Narsampet", "Nekkonda", "Dharmasagar", "Raikal", "Mutharam", "Vardhannapet", "Peddapalli", "Gollapalli"
+        ],
+        "Jangaon": [
+            "Jangaon", "Kistapur", "Kothapet", "Mogullapalle", "Nallabelli", "Narasapur", "Raghunathpally", "Sangem"
+        ],
+        "Mulugu": [
+            "Mulugu", "Eturnagaram", "Lakshmipet", "Mangapet", "Pochampad", "Tadvai", "Gattapalli"
+        ],
+        "Duggondi": [
+            "Duggondi", "Burugupalli", "Chintapalli", "Gattuppal", "Peddagudem", "Raghunathpally", "Kothapet"
+        ],
+        "Thorrur": [
+            "Thorrur", "Burugupalli", "Chinnaganjam", "Kothapet", "Nallagonda", "Peddapalli", "Tadvai"
+        ],
+        "Zaffergadh": [
+            "Zaffergadh", "Jangaon", "Nagaram", "Sangam", "Tirmalapur", "Waddadi", "Kothapet"
+        ],
+        "Nellutla": [
+            "Nellutla", "Jammikunta", "Jinnaram", "Kothapet", "Mutharam", "Peddapalli", "Kothapalli"
+        ],
+        "Cherial": [
+            "Cherial", "Chintapalli", "Enugala", "Lakshmidevipalli", "Maddur", "Mogullapalle", "Peddagudem"
+        ],
+        "Parkal": [
+            "Parkal", "Armoor", "Gattuppal", "Kalvacharla", "Malkapur", "Peddapalli", "Ananthasagar"
+        ],
+        "Khanapur": [
+            "Budharaopet", "Khanapur", "Ashok Nagar"
+        ]
+    }
+},
+
+"Hyderabad": {
+    "Mandals": {
+        "Abids": [
+            "Abids", "Basheerbagh", "Baglingampally", "Moazzam Jahi Market"
+        ],
+        "Begumpet": [
+            "Begumpet", "Prakash Nagar", "Greenlands", "Somajiguda"
+        ],
+        "Banjara Hills": [
+            "Banjara Hills", "Road Number 1", "Road Number 3", "Road Number 12"
+        ],
+        "Charminar": [
+            "Charminar", "Shah Ali Banda", "Moghalpura", "Sultan Shahi"
+        ],
+        "Gachibowli": [
+            "Gachibowli", "Financial District", "Nallagandla", "Nanakramguda"
+        ],
+        "Hitech City": [
+            "Hitech City", "Madhapur", "Kondapur", "Durgam Cheruvu"
+        ],
+        "Kondapur": [
+            "Kondapur", "Gachibowli", "Manikonda", "Nallagandla"
+        ],
+        "LB Nagar": [
+            "LB Nagar", "Dilsukhnagar", "Malkajgiri", "Kothapet"
+        ],
+        "Madhapur": [
+            "Madhapur", "Hitech City", "Gachibowli", "Kothaguda"
+        ],
+        "Secunderabad": [
+            "Secunderabad", "Parade Ground", "Monda Market", "Rasoolpura"
+        ]
+    }
+},
+
+"Hyderabad": {
+    "Mandals": {
+        "Abids": [
+            "Abids", "Basheerbagh", "Baglingampally", "Moazzam Jahi Market"
+        ],
+        "Begumpet": [
+            "Begumpet", "Prakash Nagar", "Greenlands", "Somajiguda"
+        ],
+        "Banjara Hills": [
+            "Banjara Hills", "Road Number 1", "Road Number 3", "Road Number 12"
+        ],
+        "Charminar": [
+            "Charminar", "Shah Ali Banda", "Moghalpura", "Sultan Shahi"
+        ],
+        "Gachibowli": [
+            "Gachibowli", "Financial District", "Nallagandla", "Nanakramguda"
+        ],
+        "Hitech City": [
+            "Hitech City", "Madhapur", "Kondapur", "Durgam Cheruvu"
+        ],
+        "Kondapur": [
+            "Kondapur", "Gachibowli", "Manikonda", "Nallagandla"
+        ],
+        "LB Nagar": [
+            "LB Nagar", "Dilsukhnagar", "Malkajgiri", "Kothapet"
+        ],
+        "Madhapur": [
+            "Madhapur", "Hitech City", "Gachibowli", "Kothaguda"
+        ],
+        "Secunderabad": [
+            "Secunderabad", "Parade Ground", "Monda Market", "Rasoolpura"
+        ]
+    }
+},
+"Khammam": {
+    "Mandals": {
+        
+        "Khammam": ["Khammam", "Sathupalli", "Yellandu", "Kothagudem", "Aswapuram", "Paloncha", "Kallur", "Manuguru"],
+        
+        "Madhira": ["Madhira", "Gundala", "Peddaganjam", "Raghunadhapalem", "Lingagiri", "Kothapet"],
+        
+        "Sathupalli": ["Sathupalli", "Kothagudem", "Yellandu", "Chinthakani", "Konijerla", "Tondapadu"],
+        
+        "Yellandu": ["Yellandu", "Gudur", "Bhadragiri", "G.K. Mupparam", "Malkapur"],
+        
+        "Kothagudem": ["Kothagudem", "Paloncha", "Dummugudem", "Raghunathapalem", "Thirumalayapalem"],
+        
+        "Paloncha": ["Paloncha", "Peddaganjam", "Adivi", "Kallur", "Bhadragiri"],
+        
+        "Aswapuram": ["Aswapuram", "Adivi", "Vemulapalli", "Sunkesula", "Chintalapudi"],
+        
+        "Manuguru": ["Manuguru", "Rajupeta", "Gudem", "Mutharam", "Kunta"],
+        
+        "Gundala": ["Gundala", "Raghunadhapalem", "Lankapalli", "Velair", "Mallampalli"],
+        
+        "Chinthakani": ["Chinthakani", "Alair", "Gangaram", "Lakshmipuram", "Peddapadu"],
+        
+        "Tondapadu": ["Tondapadu", "Gudur", "Chinthakani", "Chinnaboinapalli"]
+    }
+},
+
+
+
+                // Add data for other districts here
+            };
+    
+            // Function to update Mandals based on selected District
+            function updateMandals() {
+                const districtSelect = document.getElementById('District');
+                const mandalSelect = document.getElementById('Mandal');
+                const villageSelect = document.getElementById('Village');
+                
+                const selectedDistrict = districtSelect.value;
+                
+                mandalSelect.innerHTML = '<option value="">Select Mandal</option>'; // Reset Mandal dropdown
+                villageSelect.innerHTML = '<option value="">Select Village</option>'; // Reset Village dropdown
+                
+                if (selectedDistrict && data[selectedDistrict]) {
+                    const mandals = data[selectedDistrict].Mandals;
+                    for (const mandal in mandals) {
+                        if (mandals.hasOwnProperty(mandal)) {
+                            const option = document.createElement('option');
+                            option.value = mandal;
+                            option.textContent = mandal;
+                            mandalSelect.appendChild(option);
+                        }
+                    }
+                }
+            }
+    
+            // Function to update Villages based on selected Mandal
+            function updateVillages() {
+                const mandalSelect = document.getElementById('Mandal');
+                const villageSelect = document.getElementById('Village');
+                
+                const selectedDistrict = document.getElementById('District').value;
+                const selectedMandal = mandalSelect.value;
+                
+                villageSelect.innerHTML = '<option value="">Select Village</option>'; // Reset Village dropdown
+                
+                if (selectedDistrict && selectedMandal && data[selectedDistrict]) {
+                    const villages = data[selectedDistrict].Mandals[selectedMandal];
+                    if (villages) {
+                        villages.forEach(village => {
+                            const option = document.createElement('option');
+                            option.value = village;
+                            option.textContent = village;
+                            villageSelect.appendChild(option);
+                        });
+                    }
+                }
+            }
+    
+            // Add event listeners
+            document.getElementById('District').addEventListener('change', updateMandals);
+            document.getElementById('Mandal').addEventListener('change', updateVillages);
+        </script>
+
+
+
+    </body>
+</html>
+
+
