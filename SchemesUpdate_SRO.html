@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            color: #333;
+            margin: 0;
+        /* background-color:  white; */
+        font-family: Arial, sans-serif;
+        background-image: url("http://localhost/Mini_Project/Images/BM2.jpeg");
+        width: 100%;
+        /* Adjust as needed */
+        height: 100%;
+        /* Adjust as needed */
+        background-image: url("http://localhost/Mini_Project/Images/T10.jpg");
+        background-size: cover;
+        /* Ensures the image covers the entire container */
+        background-position: center;
+        /* Centers the image within the container */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background: #f4f1f139;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ddd;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: black;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="date"],
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-container button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .form-container .field-group {
+            margin-bottom: 10px;
+        }
+        .form-container input[readonly] {
+            background-color: white;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Scheme Details Form</h2>
+    <form action="SchemesUpdateServer_SRO.php" method="post">
+        <div class="field-group">
+            <label for="village">Village</label>
+            <input type="text" id="village" name="village" required>
+        </div>
+        <div class="field-group">
+            <label for="mandal">Mandal</label>
+            <input type="text" id="mandal" name="mandal" required>
+        </div>
+        <div class="field-group">
+            <label for="district">District</label>
+            <input type="text" id="district" name="district" required>
+        </div>
+        <div class="field-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" value="Telangana" readonly>
+        </div>
+        <div class="field-group">
+            <label for="schemeType">Scheme Type</label>
+            <input type="text" id="schemeType" name="schemeType" required>
+        </div>
+        <div class="field-group">
+            <label for="goNumber">GO Number</label>
+            <input type="text" id="goNumber" name="goNumber" required>
+        </div>
+        <div class="field-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="field-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" required>
+        </div>
+        <div class="field-group">
+            <label for="amount">Amount Sancined</label>
+            <input type="text" id="amount" placeholder="Enter without spaces and commas" name="amount" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
